@@ -33,6 +33,7 @@ func main() {
 	dbuser := os.Getenv("MYSQL_ADDON_USER")
 	dbpassword := os.Getenv("MYSQL_ADDON_PASSWORD")
 	dbport := os.Getenv("MYSQL_ADDON_PORT")
+
 	db, err := gorm.Open("mysql", dbuser+":"+dbpassword+"@tcp("+dbhost+":"+dbport+")/"+dbname+"?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		app.Logger().Fatalf("error while loading the tables: %v", err)

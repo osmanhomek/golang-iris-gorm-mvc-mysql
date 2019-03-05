@@ -25,17 +25,12 @@ func (c *BookController) Get() (results []models.Book) {
 	return c.Service.GetAll()
 }
 
-//http://localhost:8080/books/42
-func (c *BookController) GetBy(id int64) (results models.Book) {
+//http://localhost:8080/books/id/1
+func (c *BookController) GetIdBy(id int64) (results models.Book) {
 	return c.Service.GetByID(id)
 }
 
-//http://localhost:8080/books/profile/followers/osman
-func (c *BookController) GetProfileFollowersBy(name string) (results models.Book) {
-	return c.Service.GetByName(name)
-}
-
-//http://localhost:8080/books/profiles/osman/41
-func (c *BookController) GetProfilesBy(name string, id int64) (results models.Book) {
+//http://localhost:8080/books/name/osman
+func (c *BookController) GetNameBy(name string) (results models.Book) {
 	return c.Service.GetByName(name)
 }

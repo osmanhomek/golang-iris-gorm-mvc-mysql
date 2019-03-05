@@ -26,7 +26,7 @@ func (s *bookService) GetAll() []models.Book {
 }
 
 func (s *bookService) GetByID(id int64) models.Book {
-	return s.repo.SelectById("select * from books where ID", id)
+	return s.repo.SelectById("select * from books where ID=?", id)
 }
 
 func (s *bookService) GetByName(name string) models.Book {
