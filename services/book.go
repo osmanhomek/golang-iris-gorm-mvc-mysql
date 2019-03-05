@@ -9,17 +9,6 @@ type BookService interface {
 	GetAll() []models.Book
 	GetByID(id int64) models.Book
 	GetByName(name string) models.Book
-	//
-	//GetByName(name string) Book
-	/*
-		DeleteByID(id int64) bool
-
-		Update(id int64, user User) (User, error)
-		UpdatePassword(id int64, newPassword string) (User, error)
-		UpdateUsername(id int64, newUsername string) (User, error)
-
-		Create(userPassword string, user User) (User, error)
-	*/
 }
 
 type bookService struct {

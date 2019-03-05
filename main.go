@@ -38,7 +38,7 @@ func main() {
 		app.Logger().Fatalf("error while loading the tables: %v", err)
 		return
 	}
-	//migrate için
+	//for migrate
 	db.AutoMigrate(&models.Book{})
 
 	bookRepo := repos.NewBookRepository(db)
